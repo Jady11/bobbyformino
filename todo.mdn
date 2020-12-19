@@ -1,0 +1,19 @@
+Build routes for all 20 teams (Jady)
+    -Add url’s to link buttons on web page
+    -Redirect for /liverpool to point to home (/)
+    -Make work with try/catch
+    -Code to get random gif
+
+Find gifs and populate db (Dustin)
+
+Handlebars (Abe - to start)
+    -Install
+    -Setup
+    -Code for html/views
+    -Render code(routes)
+
+Catch for 404 gif errors, to load a different one
+
+Authentication username/password
+
+Form for gif submission
