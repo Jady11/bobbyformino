@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
 router.get('/:team', async (req, res) => {
     console.log(req.params.team)
     try {
-        const gifData = await Bobby.findAll(res.body, {
+        const gifData = await Bobby.findAll({
             where: {
                 team: req.params.team
             }
