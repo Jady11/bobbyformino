@@ -3,6 +3,6 @@ const Bobby = require('../models/index');
 
 const gifSeedData = require('./gifs.json');
 
-const seedDatabase = () => Bobby.bulkCreate(gifSeedData);
+const seedDatabase = async () => Bobby.bulkCreate(gifSeedData);
 
 seedDatabase();

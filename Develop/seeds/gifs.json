@@ -1,37 +1,37 @@
 [
     {
         "url": "https://giphy.com/gifs/lfc-g0aLYTgqrX5dfZoB6Z",
-        "team": "Arsenal",
+        "team": "arsenal",
         "is_goal": true,
         "is_meg": false
     },
     {
         "url": "https://giphy.com/gifs/lfc-2yvMseEVu5C3l0wWjO",
-        "team": "Leicester",
+        "team": "leicester",
         "is_goal": false,
         "is_meg": true
     },
     {
         "url": "https://tenor.com/view/firmino-flick-si-senor-bobby-gif-15046789",
-        "team": "Newcastle",
+        "team": "newcastle",
         "is_goal": false,
         "is_meg": false
     },
     {
         "url": "https://gifer.com/en/7Hk5",
-        "team": "Europe",
+        "team": "europe",
         "is_goal": false,
         "is_meg": false
     },
     {
         "url": "https://gfycat.com/cheapsorrowfulcrustacean",
-        "team": "Manchester City",
+        "team": "manchester-city",
         "is_goal": true,
         "is_meg": false
     },
     {
         "url": "https://imgur.com/axbdaNp",
-        "team": "Manchester United",
+        "team": "manchester-united",
         "is_goal": false,
         "is_meg": false
     }
