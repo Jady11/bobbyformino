@@ -1,19 +1,27 @@
-Build routes for all 20 teams (Jady)
+## Build routes for all 20 teams gifs(Jady)
     -Add url’s to link buttons on web page
-    -Redirect for /liverpool to point to home (/)
-    -Make work with try/catch
     -Code to get random gif
 
-Find gifs and populate db (Dustin)
+## Find gifs and populate db (Dustin)
 
-Handlebars (Abe - to start)
+## Handlebars (views) (Abe - to start)
     -Install
     -Setup
     -Code for html/views
     -Render code(routes)
+    -Add an identifier for which team page we are on (an H1 at the top or something)
 
-Catch for 404 gif errors, to load a different one
+## Build url routes for all teams
+    -Redirect for /liverpool to point to home (/)
+    -Has to render webpages with gif from db api
+    -(should be able to copy most of this from the mini-project for unit 14(MVC))
 
-Authentication username/password
+## Catch for 404 gif errors, to load a different one
 
-Form for gif submission
+## Authentication username/password
+
+## HTML form for gif submission
+    Fields:
+        -username
+        -gif url
+        -Is it a nutmeg? Goal? Celebration?(checkboxes)
