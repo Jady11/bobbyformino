@@ -30,6 +30,10 @@ Bobby.init(
         is_meg: {
             type: DataTypes.BOOLEAN,
             allowNull: true
+        },
+        is_celebration: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true
         }
     },
     {
