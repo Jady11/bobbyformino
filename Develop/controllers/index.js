@@ -1,11 +1,11 @@
 const router = require('express').Router();
 var path = require("path");
 const apiRoutes = require('./api');
+const teamRoutes = require('./teamRoutes');
 
 router.use('/api', apiRoutes);
+router.use('/', teamRoutes);
 
-router.get('/',function(req,res){
-  res.sendFile(path.join(__dirname, '../views/index.html'));
-});
+
 
 module.exports = router;
