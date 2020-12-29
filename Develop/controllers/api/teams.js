@@ -17,12 +17,17 @@ router.get('/:team', async (req, res) => {
         const gifData = await Bobby.findAll({
             where: {
                 team: req.params.team
-            }
+            },            
         })
+        const gifs = gifData.map((gif) => gif.get({plain: true}));
         res.status(200).json(gifData)
     } catch {
         res.status(500).json(err);
     }
+})
+
+router.post('/', async (req,res) => {
+
 })
 
 // router.get('/liverpool', async (req,res) => {
