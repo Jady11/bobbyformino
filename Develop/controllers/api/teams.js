@@ -19,7 +19,10 @@ router.get('/:team', async (req, res) => {
                 team: req.params.team
             },            
         })
-        const gifs = gifData.map((gif) => gif.get({plain: true}));
+        // const gifs = gifData.map((gif) => gif.get({plain: true}));
+        // res.render('main',{
+        //     gifs
+        // });
         res.status(200).json(gifData)
     } catch {
         res.status(500).json(err);
@@ -30,19 +33,5 @@ router.post('/', async (req,res) => {
 
 })
 
-// router.get('/liverpool', async (req,res) => {
-//     try{
-//         const gifData = await Bobby.findAll();
-//         res.status(200).json(gifData);
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-//     // res.redirect('/');
-
-// });
-
-// router.get('tottenham', async (req, res) => {
-
-// })
 
 module.exports = router;
