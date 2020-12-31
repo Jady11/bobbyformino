@@ -24,7 +24,7 @@ router.get('/:team', async (req, res) => {
         //     gifs
         // });
         res.status(200).json(gifData)
-    } catch {
+    } catch (err) {
         res.status(500).json(err);
     }
 })
