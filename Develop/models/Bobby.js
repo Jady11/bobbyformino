@@ -34,6 +34,13 @@ Bobby.init(
         is_celebration: {
             type: DataTypes.BOOLEAN,
             allowNull: true
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+              model: 'user',
+              key: 'id',
+            },
         }
     },
     {
