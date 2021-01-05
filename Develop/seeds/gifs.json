@@ -1,6 +1,6 @@
 [
     {
-        "url": "https://giphy.com/gifs/lfc-g0aLYTgqrX5dfZoB6Z",
+        "url": "../images/no_look.gif",
         "team": "arsenal",
         "is_goal": true,
         "is_meg": false,
@@ -21,7 +21,7 @@
         "is_celebration": false
     },
     {
-        "url": "https://gifer.com/en/7Hk5",
+        "url": "../images/psg_winner.gif",
         "team": "europe",
         "is_goal": false,
         "is_meg": false,
