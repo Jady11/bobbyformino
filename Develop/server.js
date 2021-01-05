@@ -27,10 +27,6 @@ const sess = {
  
 app.use(session(sess));
 
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
-
-// app.use(session(sess));
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

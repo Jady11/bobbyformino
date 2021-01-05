@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { getFips } = require('crypto');
 var path = require("path");
-const Bobby = require('../models');
+const { Bobby } = require('../models');
 const withAuth = require('../utils/auth');
 
 
