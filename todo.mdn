@@ -5,7 +5,6 @@
 ## Find gifs and populate db (Dustin)
 
 ## Handlebars (views) (Abe - to start)
-    -Install
     -Setup
     -Code for html/views
     -Render code(routes)
@@ -16,14 +15,13 @@
     -Has to render webpages with gif from db api
     -(should be able to copy most of this from the mini-project for unit 14(MVC))
 
-## Catch for 404 gif errors, to load a different one
-
 ## Authentication username/password
 
 ## HTML form for gif submission
     Fields:
         -username
         -gif url
+        -team
         -Is it a nutmeg? Goal? Celebration?(checkboxes)
 
 ## Login route
