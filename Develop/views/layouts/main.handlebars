@@ -33,7 +33,7 @@
     <div class="row justify-content-center align-items-center">
       
       <div class="col-3">
-        <h1 class="display-4">Best in the World, Bobby Firmino</h1>
+        <h1 class="display-4 text-center">Best in the World, Bobby Firmino</h1>
         <p class="lead text-white pl-4">
           There's something that the Kop wants you to know,
           <br>
@@ -51,7 +51,7 @@
       </div>
       <hr class="my-4">
       <div class="col-6 pt-3">
-        <div class="row align-self-center justify-content-center no-gutters">
+        <div class="row align-self-center justify-content-center no-gutters" id="hb-div">
           {{{ body }}}
          <!-- <img src='../../public/images/bobbysmile.gif'> Change this to {{handlebars}} code to insert gif-->
         </div>
@@ -93,10 +93,10 @@
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="/assets/js/index.js"></script>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="./js/login.js"></script>
 </body>
 
 </html>

@@ -13,25 +13,6 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:team', async (req, res) => {
-    console.log(req.params.team)
-    try {
-        const gifData = await Bobby.findAll({
-            where: {
-                team: req.params.team
-            },
-        });
-        const gifs = gifData.map((gif) => gif.get({ plain: true }));
-
-        res.render('teams', 
-        { ...gifs, 
-            logged_in: req.session.logged_in 
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-})
-
 router.get('/profile', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
@@ -57,8 +38,26 @@ router.get('/login', (req, res) => {
     res.redirect('/profile');
     return;
     }
-
+console.log('made it to login get')
     res.render('login');
 });
+
+router.get('/:team', async (req, res) => {
+    console.log("ROUTE TEAM:",req.params.team)
+    try {
+        const gifData = await Bobby.findAll({
+            where: {
+                team: req.params.team
+            },
+        });
+        const gifs = gifData.map((gif) => gif.get({ plain: true }));
+        res.render('teams', 
+        { ...gifs, 
+            logged_in: req.session.logged_in 
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 module.exports = router;
