@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
     try {
-        res.render('main');
+        res.render('home');
     } catch (err) {
         res.status(500).json(err);
     }
@@ -23,8 +23,10 @@ router.get('/:team', async (req, res) => {
         });
         const gifs = gifData.map((gif) => gif.get({ plain: true }));
 
-        res.render('teams.handlebars', { ...gifs });
-
+        res.render('teams', 
+        { ...gifs, 
+            logged_in: req.session.logged_in 
+        });
     } catch (err) {
         res.status(500).json(err);
     }

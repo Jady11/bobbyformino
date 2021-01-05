@@ -12,22 +12,28 @@
 
 <body class="bg-dark">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">LFC Utah</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    {{#if logged_in}}
     <div class="navbar-nav">
+        <a href="/profile">Profile</a> |
+        <button class="no-button" id="logout">Logout</button>
+        {{else}}
+        <a href="/login">Login</a>
+        
       <a class="nav-link active" href="./">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="/login">Login</a>
       <a class="nav-link" href="#">About</a>
     </div>
   </div>
+  {{/if}}
 </nav>
   <div class="jumbotron bg-danger align-middle">
-    <h1 class="display-4">Best in the World, Bobby Firmino</h1>
     <div class="row justify-content-center align-items-center">
+      
       <div class="col-3">
+        <h1 class="display-4">Best in the World, Bobby Firmino</h1>
         <p class="lead text-white pl-4">
           There's something that the Kop wants you to know,
           <br>
@@ -46,38 +52,39 @@
       <hr class="my-4">
       <div class="col-6 pt-3">
         <div class="row align-self-center justify-content-center no-gutters">
-          <img src='../../public/images/bobbysmile.gif'> <!--Change this to {{handlebars}} code to insert gif-->
+          {{{ body }}}
+         <!-- <img src='../../public/images/bobbysmile.gif'> Change this to {{handlebars}} code to insert gif-->
         </div>
       </div>
       
       <div class="col-3">
         <div class="row no-gutters">
-          <div class="col">
-        <div class="list-group">
-          <a href="/liverpool" class="list-group-item list-group-item-action">Liverpool</a>
-          <a href="/tottenham" class="list-group-item list-group-item-action">Tottenham</a>
-          <a href="/southampton" class="list-group-item list-group-item-action">Southampton</a>
-          <a href="/leicester" class="list-group-item list-group-item-action">Leicester City</a>
-          <a href="/everton" class="list-group-item list-group-item-action">Everton</a>
-          <a href="/manunited" class="list-group-item list-group-item-action">Manchester United</a>
-          <a href="/chelsea" class="list-group-item list-group-item-action">Chelsea</a>
-          <a href="/westham" class="list-group-item list-group-item-action">West Ham</a>
-          <a href="/mancity" class="list-group-item list-group-item-action">Manchester City</a>
-          <a href="/wolves" class="list-group-item list-group-item-action">Wolves</a>
+          <div class="col-auto justify-content-center">
+        <div class="list-group bg-transparent">
+          <a href="/liverpool" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold no-gutters text-center">Liverpool</a>
+          <a href="/tottenham" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Tottenham</a>
+          <a href="/southampton" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Southampton</a>
+          <a href="/leicester" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Leicester City</a>
+          <a href="/everton" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Everton</a>
+          <a href="/manunited" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Manchester United</a>
+          <a href="/chelsea" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Chelsea</a>
+          <a href="/westham" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">West Ham</a>
+          <a href="/mancity" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Manchester City</a>
+          <a href="/wolves" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Wolves</a>
         </div>
       </div>
-      <div class="col">
-        <div class="list-group">
-          <a href="/astonvilla" class="list-group-item list-group-item-action">Aston Villa</a>
-          <a href="/crystalpalace" class="list-group-item list-group-item-action">Crystal Palace</a>
-          <a href="/leeds" class="list-group-item list-group-item-action">Leeds United</a>
-          <a href="/newcastle" class="list-group-item list-group-item-action">Newcastle</a>
-          <a href="/arsenal" class="list-group-item list-group-item-action">Arsenal</a>
-          <a href="/brighton" class="list-group-item list-group-item-action">Brighton</a>
-          <a href="/burnley" class="list-group-item list-group-item-action">Burnley</a>
-          <a href="/fullham" class="list-group-item list-group-item-action">Fullham</a>
-          <a href="/westbrom" class="list-group-item list-group-item-action">West Brom</a>
-          <a href="/sheffield" class="list-group-item list-group-item-action">Sheffield United</a>
+      <div class="col-auto">
+        <div class="list-group bg-transparent">
+          <a href="/astonvilla" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Aston Villa</a>
+          <a href="/crystalpalace" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Crystal Palace</a>
+          <a href="/leeds" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Leeds United</a>
+          <a href="/newcastle" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Newcastle</a>
+          <a href="/arsenal" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Arsenal</a>
+          <a href="/brighton" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Brighton</a>
+          <a href="/burnley" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Burnley</a>
+          <a href="/fullham" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Fullham</a>
+          <a href="/westbrom" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">West Brom</a>
+          <a href="/sheffield" class="list-group-item list-group-item-action bg-transparent border-0 text-warning font-weight-bold text-center">Sheffield United</a>
         </div>
       </div>
       </div>
@@ -87,6 +94,9 @@
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="/assets/js/index.js"></script>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
 </body>
 
 </html>
