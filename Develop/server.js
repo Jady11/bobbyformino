@@ -6,14 +6,29 @@ var path = require("path");
 const helpers = require('./utils/helpers');
 
 var dir = path.join(__dirname, 'public');
-
-const { sequelize } = require('./models/index');
-// const SequelizeStore = require('connect-session-sequelize')(session.Store);
-
 const app = express();
 const PORT = process.env.PORT || 5001;
 
 const hbs = exphbs.create({ helpers });
+
+
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
+const sess = {
+  secret: "Super secret secret",
+  cookie: {},
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
+ 
+app.use(session(sess));
+
+// const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 
 // app.use(session(sess));
 
