@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 router.get('/profile', withAuth, async (req, res) => {
     try {
       // Find the logged in user based on the session ID
@@ -43,7 +44,7 @@ console.log('made it to login get')
 });
 
 router.get('/:team', async (req, res) => {
-    console.log("ROUTE TEAM:",req.params.team)
+    console.log(JSON.stringify(req.params.team))
     try {
         const gifData = await Bobby.findAll({
             where: {
@@ -51,9 +52,10 @@ router.get('/:team', async (req, res) => {
             },
         });
         const gifs = gifData.map((gif) => gif.get({ plain: true }));
+        // res.send("it worked")
         res.render('teams', 
-        { ...gifs, 
-            logged_in: req.session.logged_in 
+        { gifs
+            // logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
