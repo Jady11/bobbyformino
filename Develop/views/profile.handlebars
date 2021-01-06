@@ -1,17 +1,17 @@
 <div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
+    <h2>Welcome, {{{user.name}}}!</h2>
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
     <h3>Submit a New Gif:</h3>
+  <div class="col-md-6">
 
     <form class="form new-gif-form">
       <div class="form-group">
-        <label for="gif-name">Gif Name</label>
-        <input class="form-input" type="text" id="gif-name" name="gif-name" />
+        <label for="gif-name">Gif File Name</label>
+        <input class="form-input" type="text" id="gif-name" name="gif-name"/>
+        <label for="gifFile"></label>
+    <input type="file" class="form-control-file pt-3" id="exampleFormControlFile1">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">Submit</button>

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { getFips } = require('crypto');
 var path = require("path");
-const { Bobby } = require('../models');
+const { Bobby, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -33,13 +33,14 @@ router.get('/profile', withAuth, async (req, res) => {
     });
 
     const user = userData.get({ plain: true });
-res.send("this route worked")
-    // res.render('profile', {
-    //     user,
-    //     logged_in: true
-    // });
+// res.send("this route worked")
+    res.render('profile', {
+        user,
+        logged_in: true
+    });
     } catch (err) {
     res.status(500).json(err);
+    console.log(err)
     }
 });
 
@@ -56,10 +57,15 @@ router.get('/:team', async (req, res) => {
     try {
         const gifData = await Bobby.findAll({
             where: {
-                team: req.params.team
-            },
+                team: req.params.team,
+                // id: counts.reduce(function(prev, curr) {
+                //     return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
+                //   })
+            }
         });
+
         const gifs = gifData.map((gif) => gif.get({ plain: true }));
+        
         // res.send("it worked")
         res.render('teams', 
         { gifs

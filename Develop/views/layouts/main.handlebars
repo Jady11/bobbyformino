@@ -18,8 +18,9 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     {{#if logged_in}}
     <div class="navbar-nav">
-        <a class="text-danger" href="/profile">Profile</a> |
-        <button class="no-button" id="logout">Logout</button>
+      <a class="text-danger" href="/">Home</a>
+        <a class="text-danger pl-3" href="/profile">Profile</a>
+        <a class="text-danger pl-3" id="logout">Logout</a>
         {{else}}
         <a class="text-danger" href="/login">Login</a>
         
