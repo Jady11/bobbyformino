@@ -51,6 +51,14 @@ router.get('/about', async (req, res) => {
     }
 });
 
+router.get('/profile', async (req, res) => {
+    try {
+        res.render('profile');
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 router.get('/:team', async (req, res) => {
     console.log(JSON.stringify(req.params.team))
     try {
