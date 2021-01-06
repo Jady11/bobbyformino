@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <h3>Submit a New Gif:</h3>
+
+    <form class="form new-gif-form">
+      <div class="form-group">
+        <label for="gif-name">Gif Name</label>
+        <input class="form-input" type="text" id="gif-name" name="gif-name" />
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  {{#if gifs.length}}
+  <div class="col-md-6 gif-list">
+    <h3>Your Gifs :</h3>
+
+    {{#each gifs as |gif|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/blog/{{gif.id}}">{{gif.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{gif.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+
+<script src="./js/profile.js"></script>
