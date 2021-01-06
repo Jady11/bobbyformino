@@ -1,9 +1,8 @@
 const newFormHandler = async (event) => {
   event.preventDefault();
 
-  const name = document.querySelector('#blog-name').value.trim();
-  const description = document.querySelector('#blog-desc').value.trim();
-  const content = document.querySelector('#blog-content').value.trim();
+  const name = document.querySelector('#gif-name').value.trim();
+  const team = document.querySelector('#team-name').value.trim();
 
   if (name && description && content) {
     const response = await fetch(`/api/teams`, {
@@ -17,7 +16,7 @@ const newFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to create blog');
+      alert('Failed to upload gif');
     }
   }
 };
@@ -26,14 +25,14 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/blogs/${id}`, {
+    const response = await fetch(`/api/teams/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert('Failed to delete blog');
+      alert('Failed to delete gif');
     }
   }
 };
